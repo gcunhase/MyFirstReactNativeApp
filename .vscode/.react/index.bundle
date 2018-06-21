@@ -61533,11 +61533,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/App.js";
-
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  var _templateObject = _taggedTemplateLiteral(["\n  justifyContent: center;\n  alignItems: center;\n  backgroundColor: #F5FCFF;\n  margin: 200px;\n"], ["\n  justifyContent: center;\n  alignItems: center;\n  backgroundColor: #F5FCFF;\n  margin: 200px;\n"]);
+  var _class,
+      _temp,
+      _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/App.js";
+
+  var _templateObject = _taggedTemplateLiteral(["\n  justifyContent: center;\n  alignItems: center;\n  backgroundColor: #F5FCFF;\n  margin: 50px;\n"], ["\n  justifyContent: center;\n  alignItems: center;\n  backgroundColor: #F5FCFF;\n  margin: 50px;\n"]);
 
   var _reactNative = _require(_dependencyMap[2], "react-native");
 
@@ -61592,7 +61594,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     };
   }
 
-  _reactNative.YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+  console.ignoredYellowBox = ['Warning: Each', 'Warning: isMounted'];
 
   var Container = _native2.default.View(_templateObject);
 
@@ -61601,8 +61603,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu'
   });
 
-  var App = _wrapComponent("App")(function (_Component) {
-    _inherits(App, _Component);
+  var App = _wrapComponent("App")((_temp = _class = function (_React$Component) {
+    _inherits(App, _React$Component);
 
     function App() {
       _classCallCheck(this, App);
@@ -61618,14 +61620,14 @@ __d(function (global, _require, module, exports, _dependencyMap) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 51
             }
           },
           _react3.default.createElement(_reactNative.Image, {
             source: _require(_dependencyMap[9], './img/jeopardy-js.png'),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 43
+              lineNumber: 52
             }
           })
         );
@@ -61633,7 +61635,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }]);
 
     return App;
-  }(_react2.Component));
+  }(_react3.default.Component), _class.navigationOptions = {
+    tabBarIcon: function tabBarIcon() {
+      return _react3.default.createElement(_reactNative.Image, {
+        source: _require(_dependencyMap[10], './img/js.png'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        }
+      });
+    },
+    drawerLabel: 'Home'
+  }, _temp));
 
   exports.default = App;
   var mainNavigator = (0, _reactNavigation.createBottomTabNavigator)({
@@ -61658,22 +61671,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       path: 'vue'
     }
   });
-  App.navigationOptions = {
-    tabBarIcon: function tabBarIcon() {
-      return _react3.default.createElement(_reactNative.Image, {
-        source: _require(_dependencyMap[10], './img/js.png'),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74
-        }
-      });
-    }
-  };
 
   _reactNative.AppRegistry.registerComponent('Test', function () {
     return mainNavigator;
   });
-},493,[118,130,12,494,513,625,627,629,634,636,637],"src/App.js");
+},493,[118,130,12,494,513,625,631,634,637,640,641],"src/App.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], '../dist/styled-components.native.cjs');
 },494,[495],"node_modules/styled-components/native/index.js");
@@ -85139,7 +85141,321 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       });
     }
   };
-},625,[118,130,12,494,630,631,643,642,626],"src/screens/Angular.js");
+},625,[118,130,12,494,626,627,628,629,630],"src/screens/Angular.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = _require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/components/Question.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = _require(_dependencyMap[2], "react-native");
+
+    var _native = _require(_dependencyMap[3], "styled-components/native");
+
+    var _native2 = _interopRequireDefault(_native);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        Question: {
+            displayName: "Question"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/Users/gwena/WebstormProjects/Test/src/components/Question.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var Question = _wrapComponent("Question")(function (_Component) {
+        _inherits(Question, _Component);
+
+        function Question() {
+            _classCallCheck(this, Question);
+
+            return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).apply(this, arguments));
+        }
+
+        _createClass(Question, [{
+            key: "render",
+            value: function render() {
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 13
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 14
+                            }
+                        },
+                        this.props.q
+                    )
+                );
+            }
+        }]);
+
+        return Question;
+    }(_react2.Component));
+
+    exports.default = Question;
+},626,[118,130,12,494],"src/components/Question.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = _require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/components/Answer.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = _require(_dependencyMap[2], "react-native");
+
+    var _native = _require(_dependencyMap[3], "styled-components/native");
+
+    var _native2 = _interopRequireDefault(_native);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        Question: {
+            displayName: "Question"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/Users/gwena/WebstormProjects/Test/src/components/Answer.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var Question = _wrapComponent("Question")(function (_Component) {
+        _inherits(Question, _Component);
+
+        function Question() {
+            _classCallCheck(this, Question);
+
+            return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).apply(this, arguments));
+        }
+
+        _createClass(Question, [{
+            key: "render",
+            value: function render() {
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 13
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 14
+                            }
+                        },
+                        this.props.a
+                    )
+                );
+            }
+        }]);
+
+        return Question;
+    }(_react2.Component));
+
+    exports.default = Question;
+},627,[118,130,12,494],"src/components/Answer.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var dataAngular = [{
+    Q: "Angulars only external dependency.",
+    A: "What is RxJS?"
+  }, {
+    Q: "Server side rendering in Angular.",
+    A: "What is Angular Universal?"
+  }, {
+    Q: "This decorator should be used to decorate every service in Angular",
+    A: "What is @Injectable?"
+  }, {
+    Q: "He is the father of Angular.",
+    A: "Who is Misko Hevery?"
+  }, {
+    Q: "This is the feature of Angular which allows you to format data in a template.",
+    A: "What are pipes?"
+  }, {
+    Q: "Imports, declarations, and providers are all examples of sections of this decorator.",
+    A: "What is NgModule?"
+  }, {
+    Q: "This is the command to run the typescript compiler from the command line.",
+    A: "What is tsc?"
+  }, {
+    Q: "this is the module that contains important decorators like NgModule and Component.",
+    A: "What is @angular/core?"
+  }, {
+    Q: "Both @Component and @Injectable are examples of this feature which allows you to mark a class or other construct with metadata.",
+    A: "What are decorators?"
+  }, {
+    Q: "This is the rxjs operation that you use to convert data in a stream.",
+    A: "What is map?"
+  }];
+  var dataEmber = [{
+    Q: "The mascot of Ember.",
+    A: "Who is Tomster?"
+  }, {
+    Q: "The rendering engine behind Ember.",
+    A: "What is GlimmerJS?"
+  }, {
+    Q: "The CLI that was built as an Ember add-on?",
+    A: "What is Angular-CLI?"
+  }, {
+    Q: "The name of the hundreds of modules that extend ember-cli.",
+    A: "What are ember add-ons?"
+  }, {
+    Q: "The library for robustly managing model data in your Ember applications.",
+    A: "What is Ember data?"
+  }, {
+    Q: "A client side mock server to develop and prototype applications in Ember.",
+    A: "What is Ember CLI Mirage?"
+  }, {
+    Q: "This is the Ember CLI command to remove a component from your project.",
+    A: "What is ember destroy?"
+  }, {
+    Q: "Server side rendering in Ember.",
+    A: "What is Fastboot."
+  }, {
+    Q: "Ember has more than ____ contributors.",
+    A: "What is 670?"
+  }, {
+    Q: "Ember uses this compiler under the hood.",
+    A: "What is BabelJS?"
+  }];
+  var dataReact = [{
+    Q: "The company that created React.",
+    A: "What is Facebook?"
+  }, {
+    Q: "What happens during the lifecycle of a React component?",
+    A: "Initialization, State/property updates, Destruction"
+  }, {
+    Q: "True or False: JSX a requirement in React.",
+    A: "What is false?"
+  }, {
+    Q: "A popular flux framework.",
+    A: "What is Redux, Flummox, Alt, Fluxible, etc?"
+  }, {
+    Q: "A component that is a function of the properties provided to it.",
+    A: "What are stateless components?"
+  }, {
+    Q: "True or False: React is an MVC based framework.",
+    A: "What is false?"
+  }, {
+    Q: "_____ needs to be updated to achieve dynamic UI updates.",
+    A: "What is state?"
+  }, {
+    Q: "The API necessary for every React component.",
+    A: "What is render?"
+  }, {
+    Q: "React focuses on this part of MVC.",
+    A: "What is view?"
+  }, {
+    Q: "The name of the CLI used to create react apps.",
+    A: "What is create-react-app?"
+  }];
+  var dataVue = [{
+    Q: "The creator of Vue.",
+    A: "Who is Evan You?"
+  }, {
+    Q: "True or False: Vue has a cli.",
+    A: "What is true?"
+  }, {
+    Q: "This country has the largest adoption of Vue.",
+    A: "What is China?"
+  }, {
+    Q: "Vue has over _____ stars on Github.",
+    A: "What is 56,635?"
+  }, {
+    Q: "Vue was written while the author was at this company.",
+    A: "What is Google?"
+  }, {
+    Q: "True or False: React is an MVC based framework.",
+    A: "What is false?"
+  }, {
+    Q: "Vue was released on this year.",
+    A: "What is February 2014?"
+  }];
+  exports.dataAngular = dataAngular;
+  exports.dataEmber = dataEmber;
+  exports.dataReact = dataReact;
+  exports.dataVue = dataVue;
+},628,[],"src/components/Data.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+      "__packager_asset": true,
+      "httpServerLocation": "/assets/src/img",
+      "width": 210,
+      "height": 60,
+      "scales": [1],
+      "hash": "16d5590877505c2582d014436cf12d8e",
+      "name": "jeopardy-angular",
+      "type": "png"
+   });
+},629,[326],"src/img/jeopardy-angular.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85151,7 +85467,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "angular",
       "type": "png"
    });
-},626,[326],"src/img/angular.png");
+},630,[326],"src/img/angular.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -85313,7 +85629,19 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       });
     }
   };
-},627,[118,130,12,494,630,631,643,640,628],"src/screens/Ember.js");
+},631,[118,130,12,494,626,627,628,632,633],"src/screens/Ember.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+      "__packager_asset": true,
+      "httpServerLocation": "/assets/src/img",
+      "width": 210,
+      "height": 60,
+      "scales": [1],
+      "hash": "81f4886a8c6a826e4ad69091598c0878",
+      "name": "jeopardy-ember",
+      "type": "png"
+   });
+},632,[326],"src/img/jeopardy-ember.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85325,7 +85653,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "ember",
       "type": "png"
    });
-},628,[326],"src/img/ember.png");
+},633,[326],"src/img/ember.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -85487,185 +85815,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       });
     }
   };
-},629,[118,130,12,494,630,631,643,632,633],"src/screens/React.js");
-__d(function (global, _require, module, exports, _dependencyMap) {
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-
-    var _react2 = _require(_dependencyMap[0], "react");
-
-    var _react3 = _interopRequireDefault(_react2);
-
-    var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
-
-    var _index2 = _interopRequireDefault(_index);
-
-    var _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/components/Question.js";
-
-    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-    var _reactNative = _require(_dependencyMap[2], "react-native");
-
-    var _native = _require(_dependencyMap[3], "styled-components/native");
-
-    var _native2 = _interopRequireDefault(_native);
-
-    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-    var _components = {
-        Question: {
-            displayName: "Question"
-        }
-    };
-
-    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-        filename: "/Users/gwena/WebstormProjects/Test/src/components/Question.js",
-        components: _components,
-        locals: [module],
-        imports: [_react3.default]
-    });
-
-    function _wrapComponent(id) {
-        return function (Component) {
-            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
-        };
-    }
-
-    var Question = _wrapComponent("Question")(function (_Component) {
-        _inherits(Question, _Component);
-
-        function Question() {
-            _classCallCheck(this, Question);
-
-            return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).apply(this, arguments));
-        }
-
-        _createClass(Question, [{
-            key: "render",
-            value: function render() {
-                return _react3.default.createElement(
-                    _reactNative.View,
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                        }
-                    },
-                    _react3.default.createElement(
-                        _reactNative.Text,
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 14
-                            }
-                        },
-                        this.props.q
-                    )
-                );
-            }
-        }]);
-
-        return Question;
-    }(_react2.Component));
-
-    exports.default = Question;
-},630,[118,130,12,494],"src/components/Question.js");
-__d(function (global, _require, module, exports, _dependencyMap) {
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-
-    var _react2 = _require(_dependencyMap[0], "react");
-
-    var _react3 = _interopRequireDefault(_react2);
-
-    var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
-
-    var _index2 = _interopRequireDefault(_index);
-
-    var _jsxFileName = "/Users/gwena/WebstormProjects/Test/src/components/Answer.js";
-
-    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-    var _reactNative = _require(_dependencyMap[2], "react-native");
-
-    var _native = _require(_dependencyMap[3], "styled-components/native");
-
-    var _native2 = _interopRequireDefault(_native);
-
-    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-    var _components = {
-        Question: {
-            displayName: "Question"
-        }
-    };
-
-    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-        filename: "/Users/gwena/WebstormProjects/Test/src/components/Answer.js",
-        components: _components,
-        locals: [module],
-        imports: [_react3.default]
-    });
-
-    function _wrapComponent(id) {
-        return function (Component) {
-            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
-        };
-    }
-
-    var Question = _wrapComponent("Question")(function (_Component) {
-        _inherits(Question, _Component);
-
-        function Question() {
-            _classCallCheck(this, Question);
-
-            return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).apply(this, arguments));
-        }
-
-        _createClass(Question, [{
-            key: "render",
-            value: function render() {
-                return _react3.default.createElement(
-                    _reactNative.View,
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                        }
-                    },
-                    _react3.default.createElement(
-                        _reactNative.Text,
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 14
-                            }
-                        },
-                        this.props.a
-                    )
-                );
-            }
-        }]);
-
-        return Question;
-    }(_react2.Component));
-
-    exports.default = Question;
-},631,[118,130,12,494],"src/components/Answer.js");
+},634,[118,130,12,494,626,627,628,635,636],"src/screens/React.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85677,7 +85827,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "jeopardy-react",
       "type": "png"
    });
-},632,[326],"src/img/jeopardy-react.png");
+},635,[326],"src/img/jeopardy-react.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85689,7 +85839,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "react",
       "type": "png"
    });
-},633,[326],"src/img/react.png");
+},636,[326],"src/img/react.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -85851,55 +86001,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       });
     }
   };
-},634,[118,130,12,494,630,631,643,641,635],"src/screens/Vue.js");
-__d(function (global, _require, module, exports, _dependencyMap) {
-   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-      "__packager_asset": true,
-      "httpServerLocation": "/assets/src/img",
-      "width": 25,
-      "height": 25,
-      "scales": [1],
-      "hash": "d5f36644654c27a1bdec6d2f52375ab2",
-      "name": "vue",
-      "type": "png"
-   });
-},635,[326],"src/img/vue.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-      "__packager_asset": true,
-      "httpServerLocation": "/assets/src/img",
-      "width": 210,
-      "height": 60,
-      "scales": [1],
-      "hash": "631281883b9a94c7ff139bf139683421",
-      "name": "jeopardy-js",
-      "type": "png"
-   });
-},636,[326],"src/img/jeopardy-js.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-      "__packager_asset": true,
-      "httpServerLocation": "/assets/src/img",
-      "width": 25,
-      "height": 25,
-      "scales": [1],
-      "hash": "647eacf831f5184b1cf27b3df570477c",
-      "name": "js",
-      "type": "png"
-   });
-},637,[326],"src/img/js.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-      "__packager_asset": true,
-      "httpServerLocation": "/assets/src/img",
-      "width": 210,
-      "height": 60,
-      "scales": [1],
-      "hash": "81f4886a8c6a826e4ad69091598c0878",
-      "name": "jeopardy-ember",
-      "type": "png"
-   });
-},640,[326],"src/img/jeopardy-ember.png");
+},637,[118,130,12,494,626,627,628,638,639],"src/screens/Vue.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85911,7 +86013,31 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "name": "jeopardy-vue",
       "type": "png"
    });
-},641,[326],"src/img/jeopardy-vue.png");
+},638,[326],"src/img/jeopardy-vue.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+      "__packager_asset": true,
+      "httpServerLocation": "/assets/src/img",
+      "width": 25,
+      "height": 25,
+      "scales": [1],
+      "hash": "d5f36644654c27a1bdec6d2f52375ab2",
+      "name": "vue",
+      "type": "png"
+   });
+},639,[326],"src/img/vue.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+      "__packager_asset": true,
+      "httpServerLocation": "/assets/src/img",
+      "width": 25,
+      "height": 25,
+      "scales": [1],
+      "hash": "647eacf831f5184b1cf27b3df570477c",
+      "name": "js",
+      "type": "png"
+   });
+},641,[326],"src/img/js.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -85919,135 +86045,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "width": 210,
       "height": 60,
       "scales": [1],
-      "hash": "16d5590877505c2582d014436cf12d8e",
-      "name": "jeopardy-angular",
+      "hash": "631281883b9a94c7ff139bf139683421",
+      "name": "jeopardy-js",
       "type": "png"
    });
-},642,[326],"src/img/jeopardy-angular.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  var dataAngular = [{
-    Q: "Angulars only external dependency.",
-    A: "What is RxJS?"
-  }, {
-    Q: "Server side rendering in Angular.",
-    A: "What is Angular Universal?"
-  }, {
-    Q: "This decorator should be used to decorate every service in Angular",
-    A: "What is @Injectable?"
-  }, {
-    Q: "He is the father of Angular.",
-    A: "Who is Misko Hevery?"
-  }, {
-    Q: "This is the feature of Angular which allows you to format data in a template.",
-    A: "What are pipes?"
-  }, {
-    Q: "Imports, declarations, and providers are all examples of sections of this decorator.",
-    A: "What is NgModule?"
-  }, {
-    Q: "This is the command to run the typescript compiler from the command line.",
-    A: "What is tsc?"
-  }, {
-    Q: "this is the module that contains important decorators like NgModule and Component.",
-    A: "What is @angular/core?"
-  }, {
-    Q: "Both @Component and @Injectable are examples of this feature which allows you to mark a class or other construct with metadata.",
-    A: "What are decorators?"
-  }, {
-    Q: "This is the rxjs operation that you use to convert data in a stream.",
-    A: "What is map?"
-  }];
-  var dataEmber = [{
-    Q: "The mascot of Ember.",
-    A: "Who is Tomster?"
-  }, {
-    Q: "The rendering engine behind Ember.",
-    A: "What is GlimmerJS?"
-  }, {
-    Q: "The CLI that was built as an Ember add-on?",
-    A: "What is Angular-CLI?"
-  }, {
-    Q: "The name of the hundreds of modules that extend ember-cli.",
-    A: "What are ember add-ons?"
-  }, {
-    Q: "The library for robustly managing model data in your Ember applications.",
-    A: "What is Ember data?"
-  }, {
-    Q: "A client side mock server to develop and prototype applications in Ember.",
-    A: "What is Ember CLI Mirage?"
-  }, {
-    Q: "This is the Ember CLI command to remove a component from your project.",
-    A: "What is ember destroy?"
-  }, {
-    Q: "Server side rendering in Ember.",
-    A: "What is Fastboot."
-  }, {
-    Q: "Ember has more than ____ contributors.",
-    A: "What is 670?"
-  }, {
-    Q: "Ember uses this compiler under the hood.",
-    A: "What is BabelJS?"
-  }];
-  var dataReact = [{
-    Q: "The company that created React.",
-    A: "What is Facebook?"
-  }, {
-    Q: "What happens during the lifecycle of a React component?",
-    A: "Initialization, State/property updates, Destruction"
-  }, {
-    Q: "True or False: JSX a requirement in React.",
-    A: "What is false?"
-  }, {
-    Q: "A popular flux framework.",
-    A: "What is Redux, Flummox, Alt, Fluxible, etc?"
-  }, {
-    Q: "A component that is a function of the properties provided to it.",
-    A: "What are stateless components?"
-  }, {
-    Q: "True or False: React is an MVC based framework.",
-    A: "What is false?"
-  }, {
-    Q: "_____ needs to be updated to achieve dynamic UI updates.",
-    A: "What is state?"
-  }, {
-    Q: "The API necessary for every React component.",
-    A: "What is render?"
-  }, {
-    Q: "React focuses on this part of MVC.",
-    A: "What is view?"
-  }, {
-    Q: "The name of the CLI used to create react apps.",
-    A: "What is create-react-app?"
-  }];
-  var dataVue = [{
-    Q: "The creator of Vue.",
-    A: "Who is Evan You?"
-  }, {
-    Q: "True or False: Vue has a cli.",
-    A: "What is true?"
-  }, {
-    Q: "This country has the largest adoption of Vue.",
-    A: "What is China?"
-  }, {
-    Q: "Vue has over _____ stars on Github.",
-    A: "What is 56,635?"
-  }, {
-    Q: "Vue was written while the author was at this company.",
-    A: "What is Google?"
-  }, {
-    Q: "True or False: React is an MVC based framework.",
-    A: "What is false?"
-  }, {
-    Q: "Vue was released on this year.",
-    A: "What is February 2014?"
-  }];
-  exports.dataAngular = dataAngular;
-  exports.dataEmber = dataEmber;
-  exports.dataReact = dataReact;
-  exports.dataVue = dataVue;
-},643,[],"src/components/Data.js");
+},640,[326],"src/img/jeopardy-js.png");
 require(52);
 require(11);
 //# sourceMappingURL=index.map

@@ -11,7 +11,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  YellowBox,
 } from 'react-native';
 import styled from 'styled-components/native';
 import { createBottomTabNavigator } from 'react-navigation';
@@ -19,14 +20,15 @@ import Angular from './screens/Angular';
 import Ember from './screens/Ember';
 import ReactJS from './screens/React';
 import Vue from './screens/Vue';
-import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader'], ['Warning: Each']);
+console.ignoredYellowBox = ['Warning: Each', 'Warning: isMounted'];
 
 const Container = styled.View`
   justifyContent: center;
   alignItems: center;
   backgroundColor: #F5FCFF;
-  margin: 200px;
+  margin: 50px;
 `;
 
 const instructions = Platform.select({
@@ -36,7 +38,14 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component {
+export default class App extends React.Component {
+  static navigationOptions = {
+    tabBarIcon: () => (
+      <Image source={require('./img/js.png')}/>
+    ),
+    drawerLabel: 'Home'
+  }
+
   render() {
     return (
       <Container>
@@ -69,10 +78,5 @@ const mainNavigator = createBottomTabNavigator({
   }
   });
 
-  App.navigationOptions = {
-    tabBarIcon: () => (
-      <Image source={require('./img/js.png')}/>
-    )
-  }
-
-AppRegistry.registerComponent('Test', () => mainNavigator);
+  AppRegistry.registerComponent('Test', () => mainNavigator);
+  

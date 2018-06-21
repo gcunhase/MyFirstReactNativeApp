@@ -1,4 +1,10 @@
 {
   "name": "Test",
-  "displayName": "Test"
+  "displayName": "Test",
+  "expo": {
+    "slug": "Test",
+    "name": "Test",
+    "sdkVersion": "28.0.0",
+    "entryPoint": "/Users/gwena/WebstormProjects/Test/.vscode/exponentIndex.js"
+  }
 }
